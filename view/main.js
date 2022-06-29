@@ -3,6 +3,7 @@ const socket = io()
 
 
 
+
 //RENDERIZANDO PRODUCTOS
 const renderProductos = (data) => {
   const html = data.map(element=> {
@@ -80,7 +81,7 @@ nickForm.addEventListener('submit', (e) => {
 })
 
 socket.on('all-user' , data => {
-  console.log(data)
+ 
   let usuariosConectados = data.map(user => {
     return (`<div>${user.user}</div>`)
   }).join('')
